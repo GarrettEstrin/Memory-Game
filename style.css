@@ -1,0 +1,111 @@
+/*  Custom CSS for Memory Game
+    Created by Garrett Estrin
+*/
+
+body {
+
+  text-align: center;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+h1 {
+
+  color: rgb(2, 132, 130);
+
+}
+
+h2 {
+
+  color: #ffd700;
+
+
+}
+
+.board {
+
+  height: 80%;
+  width: 50%;
+  display: inline-block;
+  /*float: left;*/
+  background: white;
+  /*margin: 0 auto;*/
+  margin: 8%;
+
+
+}
+
+.card {
+
+  height: 200px;
+  width: 150px;
+  border: solid black 1px;
+  background-color: #ffff00;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 40px;
+
+
+header {
+    text-align: center;
+  }
+
+
+}
+
+footer {
+  background: #808080;
+  /*height: 200px;*/
+  /*overflow-y: auto;*/
+  /*display: inline-block;*/
+  clear: both;
+}
+
+.name {
+
+  color: #ff0000;
+}
+
+nav {
+  background: #808080;
+  /*float: left;*/
+  overflow: auto;
+  margin: 10px 0 0 0;
+  
+}
+
+ nav a {
+  text-decoration: none;
+  color: white;
+  background-color: #ffbf00;
+  padding: 35px;
+  display: inline-block;
+  float: left;
+} 
+
+nav a:hover {
+  background: #ee5f3c;
+}
+
+hr {
+  clear: left;
+  margin-top: 10px;
+}
+
+section {
+  /*border: 5px solid black;*/
+  float: left;
+  width: 1090px;
+}
+
+.clearfix:after {
+        visibility: hidden;
+        display: block;
+        content: " ";
+        clear: both;
+        height: 0;
+        font-size: 0;
+      }
+
+
+
