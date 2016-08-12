@@ -1,13 +1,22 @@
+var score = 0;
+
+document.getElementById("score").innerHTML = score;
+
 // game cards
 var cards = ['queen', 'queen', 'king', 'king'];
 
 // cars in play
 var cardsInPlay = [];
 
+//Messages
 
 
-// find the board
+
+
+
+// find the HTML board - create board variable
 var board = document.getElementById('game-board');
+//create cards
 function createBoard() {
   for (var i=0; i<cards.length; i++) {
     var cardElement = document.createElement('div');
@@ -30,18 +39,32 @@ function isTwoCards() {
   if (cardsInPlay.length === 2) {
     isMatch(cardsInPlay);
     // clear cards - NOT WORKING - NEED FIX
-  cardsInPlay = [];
+    // cardsInPlay = [];
   }
 }
 
 function isMatch(cards) {
   // alert
   if (cards[0] === cards[1]) {
-    alert("You found a match!");
+    score = score + 1;
+    document.getElementById("score").innerHTML = score;
+    // function matchMessage() {
+    //   var messageElement = document.createElement('div');
+    //   messageElement.classname = "message";
+    //   messageElement.addEventListener('click', addToScore);
+    
+    document.getElementById('message').innerHTML = "You got a match!  Do it again!";
   } else {
-    alert("Sorry, try again.");
+    score = score -1;
+    document.getElementById("score").innerHTML = score;
+    document.getElementById('message').innerHTML = "Sorry, try again.";
 
+
+    
   }
+  cardsInPlay = [];
 }
+
+
 
 createBoard();

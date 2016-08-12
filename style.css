@@ -43,7 +43,7 @@ h2 {
   background-color: #ffff00;
   border-radius: 10px;
   display: inline-block;
-  margin: 40px;
+  margin: 15px;
 
 
 header {
@@ -110,6 +110,19 @@ section {
 img {
   height: 200px;
   width: 150px;
+}
+
+#score {
+  font-size: 50px;
+  font-family: Impact;
+  color: red;
+}
+
+#message {
+  margin: -20px 0 40px 0;
+  font-size: 50px;
+  font-family: Impact;
+  height: 61px;
 }
 
 
