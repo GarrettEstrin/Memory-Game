@@ -125,5 +125,12 @@ img {
   height: 61px;
 }
 
+#resetbutton {
+  margin: -20px 0 40px 0;
+  font-size: 50px;
+  font-family: Impact;
+  height: 61px;
+}
+
 
 

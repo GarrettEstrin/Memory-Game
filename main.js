@@ -23,6 +23,8 @@ function createBoard() {
     cardElement.className = 'card';
     cardElement.setAttribute('data-card', cards[i]);
     cardElement.addEventListener('click', isTwoCards);
+    // Begin code to highlight selection on click
+    cardElement.addEventListener('click', )
     board.appendChild(cardElement);
   }
 
@@ -46,7 +48,7 @@ function isTwoCards() {
 function isMatch(cards) {
   // alert
   if (cards[0] === cards[1]) {
-    score = score + 1;
+    score = score + 100;
     document.getElementById("score").innerHTML = score;
     // function matchMessage() {
     //   var messageElement = document.createElement('div');
@@ -55,15 +57,21 @@ function isMatch(cards) {
     
     document.getElementById('message').innerHTML = "You got a match!  Do it again!";
   } else {
-    score = score -1;
+    score = score -100;
     document.getElementById("score").innerHTML = score;
-    document.getElementById('message').innerHTML = "Sorry, try again.";
+    document.getElementById('message').innerHTML = "<button type='button' id='resetbutton' onclick='resetCards()''>Sorry, Try Again</button>";
+    // document.getElementByClassName("card").innerHTML = "";
 
 
     
   }
   cardsInPlay = [];
 }
+
+function resetCards() {
+  document.getElementByClassName('card').innerHTML = "";
+}
+
 
 
 
