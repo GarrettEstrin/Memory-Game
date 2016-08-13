@@ -20,7 +20,7 @@ var cards = ['queen', 'queen', 'king', 'king'];
 // cars in play
 var cardsInPlay = [];
 
-//Messages
+//Messages - moved into isMatch function
 
 
 
