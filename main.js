@@ -1,6 +1,18 @@
 var score = 0;
 
-document.getElementById("score").innerHTML = score;
+//This is to keep the score at or above 0
+var currentScore = 0;
+
+
+function posScore(score) {
+if (score < 0) {
+    currentScore = 0;
+} else {
+    currentScore = score;
+}
+};
+
+document.getElementById("score").innerHTML = currentScore;
 
 // game cards
 var cards = ['queen', 'queen', 'king', 'king'];
@@ -24,7 +36,7 @@ function createBoard() {
     cardElement.setAttribute('data-card', cards[i]);
     cardElement.addEventListener('click', isTwoCards);
     // Begin code to highlight selection on click
-    cardElement.addEventListener('click', )
+    // cardElement.addEventListener('click', );
     board.appendChild(cardElement);
   }
 
@@ -40,8 +52,7 @@ function isTwoCards() {
   //this checks the number of cards in play
   if (cardsInPlay.length === 2) {
     isMatch(cardsInPlay);
-    // clear cards - NOT WORKING - NEED FIX
-    // cardsInPlay = [];
+
   }
 }
 
@@ -67,10 +78,14 @@ function isMatch(cards) {
   }
   cardsInPlay = [];
 }
-
-function resetCards() {
-  document.getElementByClassName('card').innerHTML = "";
-}
+//Code to resetcards after wrong selection - not working
+// function resetCards() {
+//   document.getElementByClassName('card').innerHTML = "";
+// }
+// //code to highlight selected card - not complete
+// function highlightCard() {
+//   this.setAttribute
+// }
 
 
 
