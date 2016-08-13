@@ -1,7 +1,7 @@
-var totalCards = ['queen', 'queen', 'king', 'king'];
+var cards = ['a', 'a', '1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8', '9', '9', '10', '10', 'j', 'j', 'q', 'q', 'k', 'k'];
 
 function shuffle(array) {
-  var m = totalCards.length, t, i;
+  var m = cards.length, t, i;
 
   // While there remain elements to shuffle…
   while (m) {
@@ -17,3 +17,5 @@ function shuffle(array) {
 
   return array;
 }
+
+

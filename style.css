@@ -25,25 +25,26 @@ h2 {
 .board {
 
   height: 80%;
-  width: 50%;
+  /*width: 50%;*/
   display: inline-block;
   /*float: left;*/
   background: white;
   /*margin: 0 auto;*/
-  margin: 8%;
+  margin: 3%;
 
 
 }
 
 .card {
 
-  height: 200px;
-  width: 150px;
+  height: 120px;
+  width: 90px;
   border: solid black 1px;
-  background-color: #ffff00;
+  background-color: #6699ff;
   border-radius: 10px;
   display: inline-block;
   margin: 15px;
+  clear: left;
 
 
 header {
@@ -107,10 +108,10 @@ section {
         font-size: 0;
       }
 
-img {
-  height: 200px;
-  width: 150px;
-}
+/*img {
+  height: 119px;
+  width: 89px;
+}*/
 
 #score {
   font-size: 50px;

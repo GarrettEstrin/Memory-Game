@@ -15,7 +15,7 @@ if (score < 0) {
 document.getElementById("score").innerHTML = currentScore;
 
 // game cards
-var cards = ['queen', 'queen', 'king', 'king'];
+var cards = ['a', 'a', '1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8', '9', '9', '10', '10', 'j', 'j', 'q', 'q', 'k', 'k'];
 
 // cars in play
 var cardsInPlay = [];
@@ -68,10 +68,48 @@ function createBoard() {
 function isTwoCards() {
   cardsInPlay.push(this.getAttribute('data-card'));
   console.log(this.getAttribute('data-card'));
-  if (this.getAttribute('data-card') === 'king') {
-    this.innerHTML = "<img src='king.jpg'>"; 
-  } else {
-    this.innerHTML = "<img src='queen.jpg'>"; 
+  if (this.getAttribute('data-card') === 'a') {
+    this.innerHTML = "<img src='images/a.png'>"; 
+  } else if (this.getAttribute('data-card') === '1') {
+    this.innerHTML = "<img src='images/1.png'>"; 
+  } else if (this.getAttribute('data-card') === '2') {
+    this.innerHTML = "<img src='images/2.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === '3') {
+    this.innerHTML = "<img src='images/3.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === '4') {
+    this.innerHTML = "<img src='images/4.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === '5') {
+    this.innerHTML = "<img src='images/5.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === '6') {
+    this.innerHTML = "<img src='images/6.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === '7') {
+    this.innerHTML = "<img src='images/7.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === '8') {
+    this.innerHTML = "<img src='images/8.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === '9') {
+    this.innerHTML = "<img src='images/9.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === '10') {
+    this.innerHTML = "<img src='images/10.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === 'j') {
+    this.innerHTML = "<img src='images/j.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === 'q') {
+    this.innerHTML = "<img src='images/q.png'>"; 
+  } 
+  else if (this.getAttribute('data-card') === 'k') {
+    this.innerHTML = "<img src='images/k.png'>"; 
+  } 
+  else {
+    this.innerHTML = "<img src='images/empty.png'>"; 
   }
   //this checks the number of cards in play
   if (cardsInPlay.length === 2) {
