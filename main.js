@@ -22,6 +22,30 @@ var cardsInPlay = [];
 
 //Messages - moved into isMatch function
 
+//shuffle function
+
+function shuffle(array) {
+  var m = cards.length, t, i;
+
+  // While there remain elements to shuffle…
+  while (m) {
+
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+
+    // And swap it with the current element.
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  }
+
+  // return array;
+}
+
+// Run this function to shuffle cards before the board is built
+shuffle(cards);
+
+
 
 
 
