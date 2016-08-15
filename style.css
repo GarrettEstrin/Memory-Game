@@ -72,7 +72,7 @@ nav {
   /*float: left;*/
   overflow: auto;
   margin: 10px 0 0 0;
-  
+
 }
 
  nav a {
@@ -82,7 +82,7 @@ nav {
   padding: 35px;
   display: inline-block;
   float: left;
-} 
+}
 
 nav a:hover {
   background: #ee5f3c;
@@ -126,7 +126,7 @@ section {
   height: 61px;
  /* width: 500px;*/
   border: solid black 1px;
-  
+
 }
 
 /*.resetbutton {
@@ -137,5 +137,6 @@ section {
   border: solid black 1px;
 }*/
 
-
-
+#highlight {
+  border: solid yellow 10px;
+}
