@@ -25,12 +25,12 @@ h2 {
 .board {
 
   height: 80%;
-  /*width: 50%;*/
+  width: 80%;
   display: inline-block;
   /*float: left;*/
   background: white;
   /*margin: 0 auto;*/
-  margin: 3%;
+  /*margin: 3%;*/
 
 
 }
@@ -120,7 +120,7 @@ section {
 }
 
 #message {
-  margin: -20px 0 40px 0;
+  margin: 20px 0 40px 0;
   font-size: 50px;
   font-family: Impact;
   height: 61px;

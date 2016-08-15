@@ -70,9 +70,11 @@ function isTwoCards() {
   console.log(this.getAttribute('data-card'));
   if (this.getAttribute('data-card') === 'a') {
     this.innerHTML = "<img src='images/a.png'>"; 
-  } else if (this.getAttribute('data-card') === '1') {
+  } 
+  else if (this.getAttribute('data-card') === '1') {
     this.innerHTML = "<img src='images/1.png'>"; 
-  } else if (this.getAttribute('data-card') === '2') {
+  } 
+  else if (this.getAttribute('data-card') === '2') {
     this.innerHTML = "<img src='images/2.png'>"; 
   } 
   else if (this.getAttribute('data-card') === '3') {
@@ -111,6 +113,7 @@ function isTwoCards() {
   else {
     this.innerHTML = "<img src='images/empty.png'>"; 
   }
+
   //this checks the number of cards in play
   if (cardsInPlay.length === 2) {
     isMatch(cardsInPlay);
@@ -119,7 +122,6 @@ function isTwoCards() {
 }
 
 function isMatch(cards) {
-  // alert
   if (cards[0] === cards[1]) {
     score = score + 100;
     document.getElementById("score").innerHTML = score;
@@ -132,22 +134,19 @@ function isMatch(cards) {
   } else {
     score = score -100;
     document.getElementById("score").innerHTML = score;
-    document.getElementById('message').innerHTML = "<button type='button' id='resetbutton' onclick='resetCards()''>Sorry, Try Again</button>";
-    // document.getElementByClassName("card").innerHTML = "";
-
-
     
-  }
+
+    document.getElementById('message').innerHTML = "Sorry.  Try Again!";
+
+    // Card reset function after wrong guess
+    document.querySelector('[data-card="' + cardsInPlay[0] + '"]').innerHTML = "";
+    document.querySelector('[data-card="' + cardsInPlay[1] + '"]').innerHTML = "";
+
+    // }
+  };
   cardsInPlay = [];
 }
-//Code to resetcards after wrong selection - not working
-// function resetCards() {
-//   document.getElementByClassName('card').innerHTML = "";
-// }
-// //code to highlight selected card - not complete
-// function highlightCard() {
-//   this.setAttribute
-// }
+
 
 
 
