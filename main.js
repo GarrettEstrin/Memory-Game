@@ -3,14 +3,8 @@ var score = 0;
 //This is to keep the score at or above 0
 var currentScore = 0;
 
-
-function posScore(score) {
-if (score < 0) {
-    currentScore = 0;
-} else {
-    currentScore = score;
-}
-};
+// Keeps score positive or zero
+if (score < 0) score = 0;
 
 document.getElementById("score").innerHTML = currentScore;
 
@@ -69,85 +63,97 @@ function isTwoCards() {
   cardsInPlay.push(this.getAttribute('data-card'));
   console.log(this.getAttribute('data-card'));
   if (this.getAttribute('data-card') === 'a') {
-    this.innerHTML = "<img src='images/a.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/a.png'>";
+  }
   else if (this.getAttribute('data-card') === '1') {
-    this.innerHTML = "<img src='images/1.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/1.png'>";
+  }
   else if (this.getAttribute('data-card') === '2') {
-    this.innerHTML = "<img src='images/2.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/2.png'>";
+  }
   else if (this.getAttribute('data-card') === '3') {
-    this.innerHTML = "<img src='images/3.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/3.png'>";
+  }
   else if (this.getAttribute('data-card') === '4') {
-    this.innerHTML = "<img src='images/4.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/4.png'>";
+  }
   else if (this.getAttribute('data-card') === '5') {
-    this.innerHTML = "<img src='images/5.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/5.png'>";
+  }
   else if (this.getAttribute('data-card') === '6') {
-    this.innerHTML = "<img src='images/6.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/6.png'>";
+  }
   else if (this.getAttribute('data-card') === '7') {
-    this.innerHTML = "<img src='images/7.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/7.png'>";
+  }
   else if (this.getAttribute('data-card') === '8') {
-    this.innerHTML = "<img src='images/8.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/8.png'>";
+  }
   else if (this.getAttribute('data-card') === '9') {
-    this.innerHTML = "<img src='images/9.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/9.png'>";
+  }
   else if (this.getAttribute('data-card') === '10') {
-    this.innerHTML = "<img src='images/10.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/10.png'>";
+  }
   else if (this.getAttribute('data-card') === 'j') {
-    this.innerHTML = "<img src='images/j.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/j.png'>";
+  }
   else if (this.getAttribute('data-card') === 'q') {
-    this.innerHTML = "<img src='images/q.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/q.png'>";
+  }
   else if (this.getAttribute('data-card') === 'k') {
-    this.innerHTML = "<img src='images/k.png'>"; 
-  } 
+    this.innerHTML = "<img src='images/k.png'>";
+  }
   else {
-    this.innerHTML = "<img src='images/empty.png'>"; 
+    this.innerHTML = "<img src='images/empty.png'>";
   }
 
-  //this checks the number of cards in play
+  //checks the number of cards in play
   if (cardsInPlay.length === 2) {
     isMatch(cardsInPlay);
 
   }
 }
 
-function isMatch(cards) {
-  if (cards[0] === cards[1]) {
-    score = score + 100;
-    document.getElementById("score").innerHTML = score;
-    // function matchMessage() {
-    //   var messageElement = document.createElement('div');
-    //   messageElement.classname = "message";
-    //   messageElement.addEventListener('click', addToScore);
-    
-    document.getElementById('message').innerHTML = "You got a match!  Do it again!";
-  } else {
-    score = score -100;
-    document.getElementById("score").innerHTML = score;
-    
+  function isMatch(cards) {
+    if (cardsInPlay[0] === cardsInPlay[1]) {
+      score = score + 100;
+      // Keeps score positive or zero
+      if (score < 0) score = 0;
+      document.getElementById("score").innerHTML = score;
 
-    document.getElementById('message').innerHTML = "Sorry.  Try Again!";
+      document.getElementById('message').innerHTML = "You got a match!  Do it again!";
+      cardsInPlay = [];
+    } else {
+      score = score -100;
+      // Keeps score positive or zero
+      if (score < 0) score = 0;
+      document.getElementById("score").innerHTML = score;
+      // Popup alert
+      // alert("Sorry.  Try again!");
 
-    // Card reset function after wrong guess
-    document.querySelector('[data-card="' + cardsInPlay[0] + '"]').innerHTML = "";
-    document.querySelector('[data-card="' + cardsInPlay[1] + '"]').innerHTML = "";
+      // Alert message
+      document.getElementById('message').innerHTML = "<id='resetbutton' button type='resetButton' onclick='resetCards()'>Sorry.  Click here to try Again!</button>";
 
-    // }
-  };
-  cardsInPlay = [];
-}
+      // Card reset function after wrong guess
+      // function resetCards() {
 
 
+      // document.querySelector('[data-card="' + cardsInPlay[0] + '"]').innerHTML = "";
+      // document.querySelector('[data-card="' + cardsInPlay[1] + '"]').innerHTML = "";
+      // }
+      // }
+    };
+
+  }
+
+function resetCards() {
+
+
+      document.querySelector('[data-card="' + cardsInPlay[0] + '"]').innerHTML = "";
+      document.querySelector('[data-card="' + cardsInPlay[1] + '"]').innerHTML = "";
+      cardsInPlay = [];
+      }
 
 
 

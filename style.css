@@ -124,14 +124,18 @@ section {
   font-size: 50px;
   font-family: Impact;
   height: 61px;
+ /* width: 500px;*/
+  border: solid black 1px;
+  
 }
 
-#resetbutton {
+/*.resetbutton {
   margin: -20px 0 40px 0;
   font-size: 50px;
   font-family: Impact;
   height: 61px;
-}
+  border: solid black 1px;
+}*/
 
 
 
