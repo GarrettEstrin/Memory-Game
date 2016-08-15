@@ -43,7 +43,7 @@ h2 {
   background-color: #6699ff;
   border-radius: 10px;
   display: inline-block;
-  margin: 15px;
+  margin: 10px 15px 10px 15px;
   clear: left;
 
 
@@ -108,24 +108,27 @@ section {
         font-size: 0;
       }
 
-/*img {
-  height: 119px;
-  width: 89px;
-}*/
+img {
+  height: 102px;
+  width: 72px;
+  margin: 0 auto;
+}
 
 #score {
   font-size: 50px;
   font-family: Impact;
   color: red;
+  /*float: left;*/
 }
 
 #message {
-  margin: 20px 0 40px 0;
+  margin: 0;
   font-size: 50px;
   font-family: Impact;
   height: 61px;
+  /*float: right;*/
  /* width: 500px;*/
-  border: solid black 1px;
+  /*border: solid black 1px;*/
 
 }
 
@@ -139,4 +142,6 @@ section {
 
 #highlight {
   border: solid yellow 10px;
+  height: 102px;
+  width: 72px;
 }
