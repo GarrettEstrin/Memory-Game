@@ -63,63 +63,63 @@ function isTwoCards() {
   cardsInPlay.push(this.getAttribute('data-card'));
   console.log(this.getAttribute('data-card'));
   if (this.getAttribute('data-card') === 'a') {
-    this.innerHTML = "<img src='images/a.png'>";
+    this.innerHTML = "A";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '1') {
-    this.innerHTML = "<img src='images/1.png'>";
+    this.innerHTML = "1";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '2') {
-    this.innerHTML = "<img src='images/2.png'>";
+    this.innerHTML = "2";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '3') {
-    this.innerHTML = "<img src='images/3.png'>";
+    this.innerHTML = "3";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '4') {
-    this.innerHTML = "<img src='images/4.png'>";
+    this.innerHTML = "4";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '5') {
-    this.innerHTML = "<img src='images/5.png'>";
+    this.innerHTML = "5";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '6') {
-    this.innerHTML = "<img src='images/6.png'>";
+    this.innerHTML = "6";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '7') {
-    this.innerHTML = "<img src='images/7.png'>";
+    this.innerHTML = "7";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '8') {
-    this.innerHTML = "<img src='images/8.png'>";
+    this.innerHTML = "8";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '9') {
-    this.innerHTML = "<img src='images/9.png'>";
+    this.innerHTML = "9";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === '10') {
-    this.innerHTML = "<img src='images/10.png'>";
+    this.innerHTML = "10";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === 'j') {
-    this.innerHTML = "<img src='images/j.png'>";
+    this.innerHTML = "J";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === 'q') {
-    this.innerHTML = "<img src='images/q.png'>";
+    this.innerHTML = "Q";
     this.setAttribute("id", "highlight");
   }
   else if (this.getAttribute('data-card') === 'k') {
-    this.innerHTML = "<img src='images/k.png'>";
+    this.innerHTML = "K";
     this.setAttribute("id", "highlight");
   }
   else {
-    this.innerHTML = "<img src='images/empty.png'>";
+    this.innerHTML = "?";
   }
 
   //checks the number of cards in play
@@ -138,23 +138,19 @@ function isTwoCards() {
 
       document.getElementById('message').innerHTML = "You got a match!  Do it again!";
       cardsInPlay = [];
+      console.log('Cards in play array cleared');
     } else {
       score = score -100;
       // Keeps score positive or zero
       if (score < 0) score = 0;
       document.getElementById("score").innerHTML = score;
-      // // Popup alert
-      // // alert("Sorry.  Try again!");
-      // if (confirm("Are you sure you wish to continue?")){
-      //   //executed when OK clicked
-      // }
-      // else{
-      //   //executed when CANCEL clicked
-      // }
-
 
       // document.getElementById('message').innerHTML = "<id='resetbutton' button type='resetButton' onclick='resetCards()'>Sorry.  Click here to try Again!</button>";
       document.getElementById('message').innerHTML = "Sorry.  Try again!";
+
+      //Timeout before cardsReset
+      setTimeout(resetCards, 3000);
+
 
     };
 
@@ -172,8 +168,14 @@ var resetCards = function() {
       document.querySelector('[data-card="' + cardsInPlay[1] + '"]').setAttribute("id", "removehighlight");
 
       cardsInPlay = [];
+      console.log('Cards in play array cleared');
       console.log('Cards were reset');
       }
+
+var emptyArray = function() {
+  cardsInPlay = [];
+  console.log('Cards in play array cleared');
+}
 
 
 

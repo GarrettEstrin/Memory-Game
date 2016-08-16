@@ -25,7 +25,7 @@ h2 {
 .board {
 
   height: 80%;
-  width: 80%;
+  width: 85%;
   display: inline-block;
   /*float: left;*/
   background: white;
@@ -39,12 +39,13 @@ h2 {
 
   height: 120px;
   width: 90px;
-  border: solid black 1px;
+  border: solid black 5px;
   background-color: #6699ff;
   border-radius: 10px;
   display: inline-block;
   margin: 10px 15px 10px 15px;
-  clear: left;
+  clear: both;
+  font-size: 80px;
 
 
 header {
@@ -109,8 +110,8 @@ section {
       }
 
 img {
-  height: 102px;
-  width: 72px;
+  height: 140px;
+  width: 90px;
   margin: 0 auto;
 }
 
@@ -141,7 +142,13 @@ img {
 }*/
 
 #highlight {
-  border: solid yellow 10px;
-  height: 102px;
-  width: 72px;
+  /*height: 120px;
+  width: 90px;*/
+  border: solid yellow 5px;
+  /*background-color: #6699ff;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px 15px 10px 15px;
+  clear: auto;
+  font-size: 80px;*/
 }
