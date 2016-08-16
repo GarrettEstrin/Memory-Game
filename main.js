@@ -61,7 +61,7 @@ function createBoard() {
 }
 function isTwoCards() {
   cardsInPlay.push(this.getAttribute('data-card'));
-  console.log(this.getAttribute('data-card'));
+  // console.log(this.getAttribute('data-card'));
   if (this.getAttribute('data-card') === 'a') {
     this.innerHTML = "A";
     this.setAttribute("id", "highlight");
@@ -149,7 +149,7 @@ function isTwoCards() {
       document.getElementById('message').innerHTML = "Sorry.  Try again!";
 
       //Timeout before cardsReset
-      setTimeout(resetCards, 3000);
+      setTimeout(resetCards, 2500);
 
 
     };
